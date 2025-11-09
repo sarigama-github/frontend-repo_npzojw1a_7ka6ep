@@ -1,0 +1,21 @@
+
+> vibe-generated-app@1.0.0 dev
+> vite
+
+
+  VITE v5.4.20  ready in 261 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.20.44.183:3000/
+7:25:56 AM [vite] warning: The character ">" is not valid inside a JSX element
+8  |            </p>
+9  |            <div className="text-sm text-neutral-500">
+10 |              <span className="font-mono">> stay curious, stay blue</span>
+   |                                          ^
+11 |            </div>
+12 |          </div>
+
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/Footer.jsx
+7:25:56 AM [vite] ✨ new dependencies optimized: framer-motion, @splinetool/react-spline
+7:25:56 AM [vite] ✨ optimized dependencies changed. reloading

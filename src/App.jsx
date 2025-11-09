@@ -1,28 +1,35 @@
-import { useState } from 'react'
+import HeroSection from './components/HeroSection';
+import Dashboard from './components/Dashboard';
+import Leaderboard from './components/Leaderboard';
+import Footer from './components/Footer';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function NavBar() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <header className="sticky top-0 z-50 w-full border-b border-neutral-900 bg-black/70 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 text-white">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+          <span className="font-mono text-sm text-emerald-300">CTF-Net</span>
         </div>
+        <nav className="flex items-center gap-5 text-sm text-neutral-300">
+          <a href="#dashboard" className="hover:text-white">Dashboard</a>
+          <a href="#leaderboard" className="hover:text-white">Leaderboard</a>
+        </nav>
       </div>
-    </div>
-  )
+    </header>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <div className="min-h-screen w-full bg-black">
+      <NavBar />
+      <HeroSection />
+      <div id="leaderboard">
+        <Dashboard />
+        <Leaderboard />
+      </div>
+      <Footer />
+    </div>
+  );
+}
